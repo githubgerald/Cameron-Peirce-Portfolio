@@ -34,7 +34,7 @@ body {
 }
 
 section {
-    padding: 0 15px 15px 0;
+    padding: 0 15px 0 15px;
 }
 
 /* Mouse-following dot styles */
@@ -68,7 +68,7 @@ header {
     align-items: center;
     position: sticky;
     top: 0;
-    z-index: 1000;
+    z-index: 5;
 
     .header-content {
         display: flex;
@@ -175,7 +175,7 @@ header {
             font-size: $font-size-xlarge;
             cursor: pointer;
             position: relative;
-            z-index: 1001; /* Ensure it's above the navbar */
+            z-index: 6; /* Ensure it's above the navbar */
         }
     
         .navbar {
@@ -190,7 +190,7 @@ header {
             flex-direction: column;
             transform: translateY(-100%);
             transition: transform 0.3s ease-in-out;
-            z-index: 1000;
+            z-index: 5;
             justify-content: center; /* Center content vertically */
     
             .menu {
@@ -224,7 +224,7 @@ header {
             position: absolute;
             top: 1rem; /* Adjust positioning as needed */
             right: 1rem; /* Adjust positioning as needed */
-            z-index: 1002; /* Ensure it's above other content */
+            z-index: 7; /* Ensure it's above other content */
         }
     
         .close-icon:hover {
@@ -340,9 +340,7 @@ header {
 
 .wrapper {
     display: none;
-    padding: 0 25px;
     max-width: 425px;
-    height: 100vh;
 
     .cards {
         display: flex;
@@ -351,8 +349,9 @@ header {
         overflow: auto;
     
         .card {
+            z-index: 8;
             width: calc(50% - 13px);
-            height: 150px;
+            height: 100px;
             background-color: #222;
             color: #dc7b7b;
             margin-bottom: 20px;

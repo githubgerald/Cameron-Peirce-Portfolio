@@ -113,26 +113,6 @@ document.addEventListener("DOMContentLoaded", function() {
 						eeee ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
 						reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
 					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi fuga ullam? Aperiam blanditiis
-						cupiditate dicta eius exercitationem explicabo fugit, impedit iure libero nam nihil nisi perferendis
-						provident quaerat repellendus vitae voluptate? Aliquid amet architecto asperiores aut consequuntur
-						corporis debitis ea eveniet in maiores, nam placeat quae, ratione rerum ullam?
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-						reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-						reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
-					</p>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque eligendi fuga ullam? Aperiam blanditiis
-						cupiditate dicta eius exercitationem explicabo fugit, impedit iure libero nam nihil nisi perferendis
-						provident quaerat repellendus vitae voluptate? Aliquid amet architecto asperiores aut consequuntur
-						corporis debitis ea eveniet in maiores, nam placeat quae, ratione rerum ullam?
-					</p>
 				</div>
 			`;
 		}
