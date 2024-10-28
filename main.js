@@ -104,15 +104,15 @@ document.addEventListener("DOMContentLoaded", function() {
 			})
 		}
 
-		const getCardContent = (title, type) => {
+		const getCardContent = (card) => {
+			const title = card.getAttribute('data-title');
+			const image = card.getAttribute('data-image');
+			const description = card.getAttribute('data-description');
 			return `
 				<div class="card-content">
 					<h2>${title}</h2>
-					<img src="./assets/${type}.png" alt="${title}">
-					<p>
-						eeee ipsum dolor sit amet, consectetur adipisicing elit. Dolor eum ipsa molestiae nesciunt nostrum porro
-						reprehenderit? Animi corporis deleniti dolore laborum, nemo pariatur temporibus voluptatem.
-					</p>
+					<img src="${image}" alt="${title}">
+					<p>${description}</p>
 				</div>
 			`;
 		}
@@ -131,6 +131,8 @@ document.addEventListener("DOMContentLoaded", function() {
 			cardClone.style.height = height + 'px';
 			// hide the original card with opacity
 			card.style.opacity = '0';
+			// bring card to top layer
+			cardClone.style.zIndex = '8';
 			// add card to the same container
 			card.parentNode.appendChild(cardClone);
 			// create a close button to handle the undo
@@ -160,6 +162,8 @@ document.addEventListener("DOMContentLoaded", function() {
 				await toggleExpansion(cardClone, {top: `${top}px`, left: `${left}px`, width: `${width}px`, height: `${height}px`}, 300)
 				// show the original card again
 				card.style.removeProperty('opacity');
+				// reset zindex
+				cardClone.style.zIndex = '3';
 				// remove the clone card
 				cardClone.remove();
 			});
@@ -170,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function() {
 				});
 			// expand the clone card
 			await toggleExpansion(cardClone, {top: 0, left: 0, width: '100vw', height: '100vh'});
-			const content = getCardContent(card.textContent, card.dataset.type)
+			const content = getCardContent(card);
 			// set the display block so the content will follow the normal flow in case the original card is not display block
 			cardClone.style.display = 'block';
 			cardClone.style.padding = '0';
